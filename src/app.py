@@ -97,7 +97,7 @@ def get_info_planet(planet_id):
 
 @app.route('/user/<int:user_id>/favs/planets', methods=['POST'])
 def new_planet_fav(user_id):
-    request_body=request.json
+    request_body = request.json
     planet_name = request_body["planet_name"]
     favourite_planets.append(planet_name)
     print(request_body)
